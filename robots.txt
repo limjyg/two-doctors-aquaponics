@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://limjyg.github.io/two-doctors-aquaponics/sitemap.xml
