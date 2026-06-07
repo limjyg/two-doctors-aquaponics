@@ -177,7 +177,9 @@ h1, h2, h3, h4 {
   position: relative;
   min-height: 86vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   color: var(--color-white);
   overflow: hidden;
 }
