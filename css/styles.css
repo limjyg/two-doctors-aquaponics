@@ -5,10 +5,10 @@
    ======================================================== */
 
 :root {
-  --color-primary: #2f6b4f;       /* deep leaf green */
-  --color-primary-dark: #1f4a36;
-  --color-secondary: #3e8fb0;     /* aqua / water blue */
-  --color-accent: #d9a954;        /* warm wood / harvest gold */
+  --color-primary: #8ca050;       /* sage green — sampled from the TDA logo */
+  --color-primary-dark: #5c6c37;  /* deeper shade of the logo's leaf green */
+  --color-secondary: #3e8fb0;     /* aqua / water blue (complements the "aqua" in aquaponics) */
+  --color-accent: #a0643c;        /* terracotta brown — sampled from the TDA logo */
   --color-whatsapp: #25d366;      /* WhatsApp brand green for CTAs */
   --color-whatsapp-dark: #1ebe5d;
   --color-bg: #f8f6f1;            /* warm cream */
@@ -131,19 +131,15 @@ h1, h2, h3, h4 {
   font-size: 1.15rem;
   color: var(--color-primary-dark);
 }
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: -0.02em;
+.brand-logo {
+  height: 44px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--color-white);
+  padding: 2px;
 }
+.site-footer .brand-logo { background: rgba(255,255,255,0.92); }
 .brand small { display: block; font-weight: 400; font-size: 0.7rem; color: var(--color-muted); letter-spacing: 0.08em; text-transform: uppercase; }
 
 .nav-links {

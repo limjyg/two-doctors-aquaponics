@@ -21,16 +21,29 @@ enquiries straight into WhatsApp. Plain HTML/CSS/JS, deployable as a static site
 - Semantic headings, descriptive `alt` text on every image (image SEO + accessibility),
   and fast-loading static markup with no client-side rendering dependency.
 
-## ⚠️ Placeholders to replace before going fully live
-- **Photos**: all images currently use `picsum.photos` placeholder URLs (random stock
-  photography) so the layout and "hooks" can be reviewed immediately. **Replace every
-  `<img src="https://picsum.photos/...">` and CSS `background-image` URL with real photos
-  of TDA's farms, courses, tours, and builds** — this will have the single biggest impact
-  on engagement and trust.
-- **Brand colours**: the existing twodoctors.sg site has no defined brand palette, so a
-  nature-inspired palette (deep leaf green `#2f6b4f`, aqua-water blue `#3e8fb0`, warm wood
-  gold `#d9a954`, cream `#f8f6f1`) was created for this build — defined as CSS variables at
-  the top of `css/styles.css`. Adjust if TDA prefers a different direction.
+## Images & branding
+All photography and the logo are TDA's own assets, sourced from www.twodoctors.sg and
+stored locally in `images/` (downloaded at original resolution, then resized/compressed
+for the web with `sips`):
+- `logo.jpg` — the official Two Doctors Aquaponics wordmark, used in the nav and footer
+  (`.brand-logo`)
+- `hero-banner.jpg`, `home-img-3.jpg` — team/founder photos in branded TDA t-shirts
+- `aquaframe.jpg` — the TDA AquaFrame product
+- `aesthetic-design.jpg` — the indoor vertical aquaponics aesthetic wall
+- `farming-workshops.jpg` — children harvesting during an enrichment workshop
+- `sustainable-supplies.jpg` — hands-on planting/composting shot
+- `home-img-1.jpg` — the aquaponics nutrient-cycle diagram (used to illustrate course content)
+- `home-img-2.jpg` — rooftop garden close-up
+- `farm-1.jpg` … `farm-5.jpg` — the five portfolio farm installations (Owl Farm vertical
+  tower, Little Forest garden & aesthetic wall, BR Farm rooftop NFT system, Elitez Farm
+  raised media beds)
+
+The brand colour palette was derived directly from the logo's leaf icon — sage green
+`#8ca050` and terracotta `#a0643c` — paired with a complementary aqua-water blue
+`#3e8fb0` and a warm cream background `#f8f6f1`. Defined as CSS variables at the top of
+`css/styles.css`.
+
+## To confirm before going fully live
 - **Course/tour names & pricing**: track names (e.g. "Little Growers Workshop", "Harvest &
   Taste") and durations are illustrative — confirm against TDA's actual programmes and
   add pricing if you'd like it shown.
