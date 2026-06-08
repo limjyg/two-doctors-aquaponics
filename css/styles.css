@@ -132,14 +132,10 @@ h1, h2, h3, h4 {
   color: var(--color-primary-dark);
 }
 .brand-logo {
-  height: 44px;
+  height: 64px;
   width: auto;
-  border-radius: 8px;
   object-fit: contain;
-  background: var(--color-white);
-  padding: 2px;
 }
-.site-footer .brand-logo { background: rgba(255,255,255,0.92); }
 .brand small { display: block; font-weight: 400; font-size: 0.7rem; color: var(--color-muted); letter-spacing: 0.08em; text-transform: uppercase; }
 
 .nav-links {
