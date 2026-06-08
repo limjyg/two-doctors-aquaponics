@@ -146,13 +146,17 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 28px;
+  font-family: var(--font-heading);
   font-weight: 500;
-  font-size: 0.96rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 .nav-links a { padding: 6px 2px; border-bottom: 2px solid transparent; transition: border-color 0.15s ease, color 0.15s ease; }
 .nav-links a:hover, .nav-links a.active { color: var(--color-primary); border-bottom-color: var(--color-secondary); }
 
 .nav-cta { display: flex; align-items: center; gap: 16px; }
+.nav-cta .btn { padding: 9px 18px; font-size: 0.85rem; gap: 8px; white-space: nowrap; }
 .nav-toggle { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--color-primary-dark); }
 
 @media (max-width: 880px) {
