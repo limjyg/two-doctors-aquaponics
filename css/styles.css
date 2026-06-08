@@ -176,6 +176,12 @@ h1, h2, h3, h4 {
   .nav-cta .btn span.btn-text-full { display: none; }
 }
 
+@media (max-width: 480px) {
+  .nav { padding: 14px 16px; gap: 12px; }
+  .site-header .brand-logo { height: 56px; }
+  .nav-cta .btn { padding: 8px 12px; }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
