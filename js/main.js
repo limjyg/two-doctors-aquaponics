@@ -57,4 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Footer year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Floating WhatsApp button: pill label on desktop + mobile sticky bar
+  const waFloat = document.querySelector('.whatsapp-float');
+  if (waFloat) {
+    waFloat.innerHTML = '💬<span class="wa-float-text">Book Now</span>';
+
+    const mobileBar = document.createElement('a');
+    mobileBar.className = 'mobile-wa-bar';
+    mobileBar.href = waFloat.href;
+    mobileBar.target = '_blank';
+    mobileBar.rel = 'noopener noreferrer';
+    mobileBar.setAttribute('data-wa-label', 'mobile_sticky_wa');
+    mobileBar.innerHTML = '💬 &nbsp;Book on WhatsApp';
+    document.body.appendChild(mobileBar);
+  }
 });
