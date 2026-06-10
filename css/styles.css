@@ -440,6 +440,79 @@ h1, h2, h3, h4 {
   100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
 }
 
+/* ---------- Comparison table ---------- */
+.table-scroll { overflow-x: auto; margin-bottom: 40px; }
+.compare-table { width: 100%; min-width: 600px; border-collapse: collapse; background: var(--color-white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); }
+.compare-table th, .compare-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid rgba(32,48,42,0.08); font-size: 0.92rem; }
+.compare-table thead th { background: var(--color-bg-alt); font-family: var(--font-heading); color: var(--color-primary-dark); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.compare-table tbody tr:last-child td { border-bottom: none; }
+.compare-table td:first-child { font-weight: 600; color: var(--color-primary-dark); }
+.compare-table a { color: var(--color-primary-dark); text-decoration: underline; text-decoration-color: rgba(140,160,80,0.4); }
+.compare-table a:hover { color: var(--color-primary); }
+
+/* ---------- Tour / experience package cards ---------- */
+.package-card { position: relative; }
+.package-card.featured { border: 2px solid var(--color-primary); }
+.package-ribbon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 7px 18px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+.package-duration {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-secondary);
+  background: rgba(62,143,176,0.12);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.package-highlights { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 2px 0; }
+.package-highlights li { font-size: 0.92rem; color: var(--color-muted); }
+.price-row {
+  display: flex;
+  gap: 18px;
+  padding: 14px 0;
+  margin: 4px 0 2px;
+  border-top: 1px solid rgba(32,48,42,0.08);
+  border-bottom: 1px solid rgba(32,48,42,0.08);
+}
+.price-block { flex: 1; }
+.price-block strong { display: block; font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary-dark); line-height: 1.3; }
+.price-block span { font-size: 0.76rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ---------- Age-group guide ---------- */
+.age-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+@media (max-width: 1000px) { .age-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .age-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .age-grid { grid-template-columns: 1fr; } }
+.age-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 26px 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.age-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(32,48,42,0.16); }
+.age-card .age-icon { font-size: 2.2rem; margin-bottom: 12px; }
+.age-card h4 { font-size: 0.96rem; margin-bottom: 8px; }
+.age-card p { font-size: 0.85rem; color: var(--color-muted); margin-bottom: 14px; }
+.age-card a { font-size: 0.82rem; font-weight: 700; color: var(--color-primary); }
+.age-card a:hover { color: var(--color-secondary); }
+
 /* ---------- Utility ---------- */
 .text-center { text-align: center; }
 .mx-auto { margin-left: auto; margin-right: auto; }
@@ -449,6 +522,8 @@ h1, h2, h3, h4 {
   font-size: 0.8rem; font-weight: 600;
   padding: 8px 16px; border-radius: 999px;
   background: var(--color-bg-alt); color: var(--color-primary-dark);
+  transition: background 0.15s ease, color 0.15s ease;
 }
+a.badge:hover { background: var(--color-primary); color: var(--color-white); }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.in-view { opacity: 1; transform: translateY(0); }
