@@ -513,6 +513,9 @@ h1, h2, h3, h4 {
 .age-card a { font-size: 0.82rem; font-weight: 700; color: var(--color-primary); }
 .age-card a:hover { color: var(--color-secondary); }
 
+/* ---------- Add-on cards ---------- */
+.addon-icon { font-size: 2.6rem; line-height: 1; margin-bottom: 4px; }
+
 /* ---------- Utility ---------- */
 .text-center { text-align: center; }
 .mx-auto { margin-left: auto; margin-right: auto; }
