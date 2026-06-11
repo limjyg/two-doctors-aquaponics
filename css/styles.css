@@ -146,19 +146,44 @@ h1, h2, h3, h4 {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 2px;
   font-family: var(--font-heading);
   font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
 }
-.nav-links a { padding: 6px 2px; border-bottom: 2px solid transparent; transition: border-color 0.15s ease, color 0.15s ease; }
-.nav-links a:hover, .nav-links a.active { color: var(--color-primary); border-bottom-color: var(--color-secondary); }
+.nav-links a {
+  padding: 8px 13px;
+  border-radius: 999px;
+  border-bottom: none;
+  color: var(--color-muted);
+  transition: background 0.18s ease, color 0.18s ease;
+  white-space: nowrap;
+}
+.nav-links a:hover { background: var(--color-bg-alt); color: var(--color-primary-dark); border-bottom-color: transparent; }
+.nav-links a.active { background: var(--color-primary); color: var(--color-white); border-bottom-color: transparent; }
 
-.nav-cta { display: flex; align-items: center; gap: 16px; }
+.nav-cta { display: flex; align-items: center; gap: 12px; }
 .nav-cta .btn { padding: 9px 18px; font-size: 0.85rem; gap: 8px; white-space: nowrap; }
-.nav-toggle { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--color-primary-dark); }
+
+/* Hamburger toggle — pill shape, CSS lines */
+.nav-toggle {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  width: 42px; height: 42px; border-radius: 999px;
+  background: var(--color-bg-alt); border: none; cursor: pointer;
+  transition: background 0.18s ease;
+  flex-shrink: 0;
+}
+.nav-toggle:hover { background: rgba(140,160,80,0.18); }
+.nav-toggle span {
+  display: block; width: 18px; height: 2px;
+  background: var(--color-primary-dark); border-radius: 2px;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 880px) {
   .nav-links {
@@ -166,14 +191,23 @@ h1, h2, h3, h4 {
     top: 100%; left: 0; right: 0;
     background: var(--color-white);
     flex-direction: column;
-    align-items: flex-start;
-    padding: 18px 24px;
-    gap: 14px;
-    box-shadow: var(--shadow-soft);
+    align-items: stretch;
+    padding: 10px 14px 16px;
+    gap: 2px;
+    box-shadow: 0 16px 40px rgba(32,48,42,0.13);
+    border-top: 1px solid rgba(32,48,42,0.06);
     display: none;
   }
   .nav-links.open { display: flex; }
-  .nav-toggle { display: block; }
+  .nav-links a {
+    padding: 11px 16px;
+    border-radius: 12px;
+    color: var(--color-dark);
+    font-size: 0.92rem;
+  }
+  .nav-links a:hover { background: var(--color-bg-alt); color: var(--color-primary-dark); }
+  .nav-links a.active { background: var(--color-primary); color: var(--color-white); }
+  .nav-toggle { display: flex; }
   .nav-cta .btn span.btn-text-full { display: none; }
 }
 
